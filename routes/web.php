@@ -11,37 +11,48 @@
 |
 */
 
+
+//  hien thi trang chu
 Route::get('/', [
     'as'=>'home',
     'uses'=>'HomeController@index'
 ]);
 
 
-Route::get('/admin', [
-    'as'=>'admin',
-    'uses'=>'AdminController@index'
-]);
+
+//  hien thi trang admin
 Route::get('/dashboard', [
     'as'=>'dashboard',
     'uses'=>'AdminController@showDashboard'
 ]);
+
+//  hien thi trang login
+Route::get('/admin', [
+    'as'=>'admin',
+    'uses'=>'AdminController@index'
+]);
+
+//  dang nhap admin
 Route::post('/admin-dashboard', [
     'as'=>'admin-dashboard',
     'uses'=>'AdminController@dashboard'
 ]);
+
+//  dang xuat admin
 Route::get('/admin-logout', [
     'as'=>'admin-logout',
     'uses'=>'AdminController@logout'
 ]);
 
+//  them danh muc san pham
 Route::get('/add-category', [
     'as'=>'add-category',
-    'uses'=>'CategoryController@lo'
+    'uses'=>'CategoryController@addCategory'
 ]);
 
-
+//  danh sach danh muc san pham
 Route::get('/list-category', [
     'as'=>'list-category',
-    'uses'=>'CategoryController@lo'
+    'uses'=>'CategoryController@listCategory'
 ]);
 

@@ -8,14 +8,17 @@ use Session;
 
 class AdminController extends Controller
 {
+    //  hien thi trang login
     public function index(){
         return view('admin_login');
     }
+
+    //  hien thi trang chu admin
     public function showDashboard(){
         return view('admin.dashboard');
     }
 
-    //  dang nhap
+    //  dang nhap admin
     public function dashboard(Request $request){
         $admin_email = $request->admin_email;
         $admin_password = $request->admin_password;
@@ -30,7 +33,7 @@ class AdminController extends Controller
         }
     }
 
-    //  dang xuat
+    //  dang xuat admin
     public function logout(){
         Session::put('admin_name', null);
         Session::put('admin_id',null);

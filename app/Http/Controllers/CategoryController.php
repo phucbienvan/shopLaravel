@@ -16,4 +16,17 @@ class CategoryController extends Controller
     public function listCategory(){
         return view('admin.list_category');
     }
+
+    //  luu danh muc san pham
+    public function saveCategory(Request $request){
+        $data = [
+            'category_name' => $request->category_name,
+            'category_desc' => $request->category_desc,
+            'category_status'=> $request->category_status
+        ];
+
+        var_dump($data);
+        die();
+
+    }
 }

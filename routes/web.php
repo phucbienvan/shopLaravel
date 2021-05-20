@@ -56,3 +56,10 @@ Route::get('/list-category', [
     'uses'=>'CategoryController@listCategory'
 ]);
 
+//  luu danh muc san pham
+Route::post('/save-category', [
+    'as'=>'save-category',
+    'uses'=>'CategoryController@saveCategory'
+]);
+
+

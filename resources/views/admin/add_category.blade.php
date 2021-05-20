@@ -11,7 +11,8 @@
                 </header>
                 <div class="panel-body">
                     <div class="position-center">
-                        <form role="form">
+                        <form role="form" action="{{URL::to('save-category')}}" method="post">
+                            {{csrf_field()}}
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Name</label>
                                 <input type="text" name="category_name" class="form-control" id="exampleInputEmail1" placeholder="Name category">
@@ -22,20 +23,16 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Hien thi</label>
-                                <select class="form-control m-bot15">
-                                    <option>Hien</option>
-                                    <option>An</option>
+                                <select name="category_status" class="form-control m-bot15">
+                                    <option value="1">Hien</option>
+                                    <option value="0">An</option>
                                 </select>
                             </div>
-
-                            <button type="submit" name="add_category" class="btn btn-info">Submit</button>
+                            <button type="submit" name="add_category" class="btn btn-info">Add Category</button>
                         </form>
                     </div>
-
                 </div>
             </section>
-
         </div>
-
     </div>
 @endsection

@@ -55,4 +55,9 @@ class CategoryController extends Controller
         Session::put('message', 'Cap nhat danh  muc thanh cong');
         return redirect('list-category');
     }
+
+    //  Xoa danh muc san pham
+    public function deleteCategory(){
+
+    }
 }

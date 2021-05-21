@@ -41,17 +41,24 @@
                     <th style="width:30px;">Action</th>
                 </tr>
                 </thead>
-
+                @foreach($category as $item)
                 <tr>
                     <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-                    <td>Avatar system</td>
-                    <td>15c</td>
-                    <td>Jul 15, 2013</td>
+                    <td>{{$item->category_name}}</td>
+                    <td>{{$item->category_desc}}</td>
+
+                    @if($item->category_status == 1)
+                        <td>Hien</td>
+                    @else
+                        <td>An</td>
+                    @endif
                     <td>
-                        <a href="" class="active" ui-toggle-class=""><i class="fa fa-pencil text-success text-active"></i><br><i class="fa fa-times text-danger text"></i></a>
+                        <a href="{{route('edit-category', $item->category_id)}}" class="active" ui-toggle-class=""><i class="fa fa-pencil text-success text-active"></i></a>
+                        <br>
+                        <a href="" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
                     </td>
                 </tr>
-
+                    @endforeach
                 </tbody>
             </table>
         </div>

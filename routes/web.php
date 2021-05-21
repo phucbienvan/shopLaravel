@@ -61,5 +61,21 @@ Route::post('/save-category', [
     'as'=>'save-category',
     'uses'=>'CategoryController@saveCategory'
 ]);
+//  cap nhat danh muc san pham
+Route::post('/update-category/{id}', [
+    'as'=>'update-category',
+    'uses'=>'CategoryController@updateCategory'
+]);
 
+// chinh sua danh muc san pham
+Route::get('/edit-category/{id}', [
+    'as'=>'edit-category',
+    'uses'=>'CategoryController@editCategory'
+]);
+
+//  Xoa danh muc san pham
+Route::get('/delete-category/{id}', [
+    'as'=>'delete-category',
+    'uses'=>'CategoryController@deleteCategory'
+]);
 

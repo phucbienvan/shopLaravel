@@ -30,6 +30,13 @@
                             </div>
                             <button type="submit" name="add_category" class="btn btn-info">Add Category</button>
                         </form>
+                        <?php
+                        $message = Session::get('message');
+                        if ($message){
+                            echo $message;
+                            Session::put('message', null);
+                        }
+                        ?>
                     </div>
                 </div>
             </section>

@@ -55,7 +55,7 @@
                     <td>
                         <a href="{{route('edit-category', $item->category_id)}}" class="active" ui-toggle-class=""><i class="fa fa-pencil text-success text-active"></i></a>
                         <br>
-                        <a href="{{route('delete-category', $item->category_id)}}" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
+                        <a href="{{route('delete-category', $item->category_id)}}" onclick="return confirm('Are you sure to delete?')" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
                     </td>
                 </tr>
                     @endforeach

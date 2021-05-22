@@ -57,7 +57,9 @@ class CategoryController extends Controller
     }
 
     //  Xoa danh muc san pham
-    public function deleteCategory(){
-
+    public function deleteCategory($category_id){
+        DB::table('tbl_category')->where('category_id', $category_id)->delete();
+        Session::put('message', 'Xoa danh  muc thanh cong');
+        return redirect('list-category');
     }
 }

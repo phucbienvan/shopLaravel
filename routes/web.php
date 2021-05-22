@@ -79,3 +79,39 @@ Route::get('/delete-category/{id}', [
     'uses'=>'CategoryController@deleteCategory'
 ]);
 
+    //  Brand
+//  them nhan hieu  san pham
+Route::get('/add-brand', [
+    'as'=>'add-brand',
+    'uses'=>'BrandController@addBrand'
+]);
+
+//  luu nhan hieu san pham
+Route::post('/save-brand', [
+    'as'=>'save-brand',
+    'uses'=>'BrandController@saveBrand'
+]);
+
+//  danh sach nhan hieu  san pham
+Route::get('/list-brand', [
+    'as'=>'list-brand',
+    'uses'=>'BrandController@listBrand'
+]);
+
+// chinh sua nhan hieu san pham
+Route::get('/edit-brand/{id}', [
+    'as'=>'edit-brand',
+    'uses'=>'BrandController@editBrand'
+]);
+
+//  cap nhat nhan hieu san pham
+Route::post('/update-brand/{id}', [
+    'as'=>'update-brand',
+    'uses'=>'BrandController@updateBrand'
+]);
+
+//  Xoa nhan hieu san pham
+Route::get('/delete-brand/{id}', [
+    'as'=>'delete-brand',
+    'uses'=>'BrandController@deleteBrand'
+]);

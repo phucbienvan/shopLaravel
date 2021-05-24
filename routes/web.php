@@ -115,3 +115,40 @@ Route::get('/delete-brand/{id}', [
     'as'=>'delete-brand',
     'uses'=>'BrandController@deleteBrand'
 ]);
+
+    //  San pham
+//  danh sach san pham
+Route::get('/list-product', [
+    'as'=>'list-product',
+    'uses'=>'ProductController@listProduct'
+]);
+
+//  them  san pham
+Route::get('/add-product', [
+    'as'=>'add-product',
+    'uses'=>'ProductController@addProduct'
+]);
+
+//  luu  san pham
+Route::post('/save-product', [
+    'as'=>'save-product',
+    'uses'=>'ProductController@saveProduct'
+]);
+
+// chinh san pham
+Route::get('/edit-product/{id}', [
+    'as'=>'edit-product',
+    'uses'=>'ProductController@editProduct'
+]);
+
+//  cap nhat  san pham
+Route::post('/update-product/{id}', [
+    'as'=>'update-product',
+    'uses'=>'ProductController@updateProduct'
+]);
+
+//  Xoa nhan hieu san pham
+Route::get('/delete-brand/{id}', [
+    'as'=>'delete-brand',
+    'uses'=>'BrandController@deleteBrand'
+]);
